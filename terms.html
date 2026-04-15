@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vilkår for bruk — Rekna</title>
+  <meta name="description" content="Vilkår for bruk av Rekna-appen." />
+  <link rel="canonical" href="https://rekna.app/terms.html" />
+  <style>
+    :root {
+      --bg: #0F1217; --panel: #242933; --text: #E6E6EB;
+      --muted: #8A8F9E; --line: #2E3340; --accent: #1D9E75; --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
+    header { margin-bottom: 32px; }
+    header a { color: var(--muted); font-size: 15px; }
+    header a:hover { color: var(--accent); }
+    main { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; }
+    h1 { font-size: 28px; margin: 0 0 6px; }
+    h2 { font-size: 18px; margin: 28px 0 10px; color: var(--accent); }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 14px; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    footer { color: var(--muted); font-size: 14px; margin-top: 32px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="/">← Rekna</a>
+    </header>
+
+    <main>
+      <h1>Vilkår for bruk</h1>
+      <p class="muted">Gyldig fra: 15. april 2026</p>
+
+      <h2>Aksept av vilkår</h2>
+      <p>Ved å laste ned og bruke Rekna aksepterer du disse vilkårene. Appen er utviklet av Sondre Vaage Haram.</p>
+
+      <h2>Bruk av appen</h2>
+      <ul>
+        <li>Rekna er beregnet for personlig og yrkesmessig bruk til registrering av kvitteringer og kjøring.</li>
+        <li>Du er selv ansvarlig for at data du registrerer er korrekte.</li>
+        <li>Rekna er ikke en regnskaps- eller revisortjeneste. Eksporterte rapporter bør kontrolleres av bruker.</li>
+      </ul>
+
+      <h2>Rekna Pro</h2>
+      <ul>
+        <li>Rekna Pro tilbys som månedlig eller årlig abonnement via Apple App Store.</li>
+        <li>Abonnementet fornyes automatisk med mindre det avsluttes minst 24 timer før utløp.</li>
+        <li>Prisen trekkes fra din Apple-konto ved bekreftet kjøp.</li>
+        <li>Du kan administrere og avslutte abonnementet i App Store-innstillingene på din enhet.</li>
+      </ul>
+
+      <h2>Ansvarsfraskrivelse</h2>
+      <p>Rekna leveres «som den er» uten garantier. Vi er ikke ansvarlige for tap som følge av feil i appen, manglende tilgang, eller feilaktige beregninger. MVA-satser og km-satser er oppdatert per 2026 — kontroller alltid med gjeldende regler fra Skatteetaten.</p>
+
+      <h2>Endringer</h2>
+      <p>Vi forbeholder oss retten til å endre disse vilkårene. Oppdaterte vilkår vil publiseres på denne siden.</p>
+
+      <h2>Kontakt</h2>
+      <p><a href="mailto:support@rekna.app">support@rekna.app</a></p>
+    </main>
+
+    <footer>© <span id="year"></span> Sondre Vaage Haram</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

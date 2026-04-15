@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personvernerklæring — Rekna</title>
+  <meta name="description" content="Rekna lagrer all data lokalt på din enhet. Ingen kontoer, ingen sporing." />
+  <link rel="canonical" href="https://rekna.app/privacy.html" />
+  <style>
+    :root {
+      --bg: #0F1217; --panel: #242933; --text: #E6E6EB;
+      --muted: #8A8F9E; --line: #2E3340; --accent: #1D9E75; --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
+    header { margin-bottom: 32px; }
+    header a { color: var(--muted); font-size: 15px; }
+    header a:hover { color: var(--accent); }
+    main { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; }
+    h1 { font-size: 28px; margin: 0 0 6px; }
+    h2 { font-size: 18px; margin: 28px 0 10px; color: var(--accent); }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 14px; padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    footer { color: var(--muted); font-size: 14px; margin-top: 32px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="/">← Rekna</a>
+    </header>
+
+    <main>
+      <h1>Personvernerklæring</h1>
+      <p class="muted">Gyldig fra: 15. april 2026</p>
+
+      <h2>Hvem vi er</h2>
+      <p>Rekna er utviklet av Sondre Vaage Haram. Appen hjelper deg med å registrere kvitteringer og generere reiseregninger.</p>
+
+      <h2>Data vi samler inn</h2>
+      <ul>
+        <li><strong>Kvitteringsbilder:</strong> Når du skanner en kvittering, sendes bildet til Anthropics API (Claude) for automatisk tekstgjenkjenning. Bildet brukes kun til å lese dato, leverandør og beløp, og lagres ikke av Anthropic. Se <a href="https://www.anthropic.com/privacy" target="_blank">Anthropics personvernpolicy</a>.</li>
+        <li><strong>Lokal data:</strong> Kvitteringer, kjørebokoppføringer og prosjekter lagres utelukkende på din enhet.</li>
+        <li><strong>iCloud-backup (valgfritt):</strong> Dersom du aktiverer iCloud-sikkerhetskopi, lagres data i din private iCloud-konto. Ingen andre har tilgang.</li>
+        <li><strong>Kjøpsinformasjon:</strong> Abonnement håndteres av Apple via App Store. Vi mottar aldri betalingsinformasjon.</li>
+      </ul>
+
+      <h2>Data vi ikke samler inn</h2>
+      <ul>
+        <li>Ingen brukerkontoer eller pålogging</li>
+        <li>Ingen annonser eller reklamesporing</li>
+        <li>Ingen analyseverktøy (ingen Google Analytics, Firebase e.l.)</li>
+        <li>Ingen deling av data med tredjeparter utover det som er nevnt over</li>
+      </ul>
+
+      <h2>Dine rettigheter</h2>
+      <p>All data ligger på din enhet. Du kan slette all data ved å avinstallere appen. For henvendelser, kontakt oss på <a href="mailto:privacy@rekna.app">privacy@rekna.app</a>.</p>
+
+      <h2>Endringer</h2>
+      <p>Vi kan oppdatere denne erklæringen dersom appen endres. Oppdatert versjon vil alltid finnes på denne siden.</p>
+
+      <h2>Kontakt</h2>
+      <p><a href="mailto:support@rekna.app">support@rekna.app</a></p>
+    </main>
+
+    <footer>© <span id="year"></span> Sondre Vaage Haram</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
