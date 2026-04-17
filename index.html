@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rekna — Kvitteringer og reiseregninger, enkelt.</title>
+<meta name="description" content="Skann kvitteringer, beregn MVA automatisk, og eksporter ferdig reiseregning. Kjørebok med statens satser. Laget for norske bedrifter.">
+<meta name="theme-color" content="#0B0E13">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g:#1D9E75;--gs:rgba(29,158,117,.10);--gg:rgba(29,158,117,.20);--bg:#0B0E13;--bg2:#111419;--card:#171B22;--border:rgba(255,255,255,.07);--t1:#F2F2F2;--t2:rgba(255,255,255,.50);--t3:rgba(255,255,255,.25);--amber:#E9A820;--radius:14px}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--t1);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.7}
+a{color:var(--g);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+hr{border:none;border-top:1px solid var(--border);margin:0}
+header{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(11,14,19,.75);border-bottom:1px solid var(--border)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:700;font-size:18px;color:var(--g);letter-spacing:-.3px}.logo:hover{text-decoration:none}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--t2);transition:color .15s}.nav-links a:hover{color:var(--t1);text-decoration:none}
+.nav-cta{font-size:13px!important;font-weight:600!important;padding:7px 16px;background:var(--g);color:var(--bg)!important;border-radius:20px;transition:transform .12s}.nav-cta:hover{transform:scale(1.03);text-decoration:none}
+@media(max-width:600px){.nav-links a:not(.nav-cta){display:none}}
+.hero{padding:120px 0 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-300px;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(ellipse,var(--gg),transparent 70%);pointer-events:none}
+.hero .version{display:inline-block;font-size:12px;font-weight:600;color:var(--g);background:var(--gs);padding:4px 14px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-size:clamp(32px,6vw,54px);font-weight:700;line-height:1.08;letter-spacing:-.03em;margin-bottom:18px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero p.desc{font-size:17px;color:var(--t2);max-width:480px;margin:0 auto 28px;line-height:1.6}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:12px 24px;background:var(--g);color:var(--bg);border-radius:12px;transition:transform .12s}.btn-primary:hover{transform:scale(1.03);text-decoration:none}
+.btn-ghost{font-size:14px;font-weight:500;color:var(--t2);padding:12px 20px;border:1px solid var(--border);border-radius:12px;transition:border-color .15s,color .15s}.btn-ghost:hover{border-color:var(--g);color:var(--t1);text-decoration:none}
+.hero-trust{font-size:13px;color:var(--t3);margin-bottom:48px}.hero-trust span{margin:0 6px}
+.hero-shots{display:flex;gap:16px;justify-content:center;overflow-x:auto;padding:0 24px 8px;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+.hero-shots img{width:200px;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06);flex-shrink:0;scroll-snap-align:center;transition:transform .3s}.hero-shots img:hover{transform:translateY(-6px)}
+section{padding:90px 0}
+.sl{font-size:12px;font-weight:600;color:var(--g);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+.st{font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.ss{color:var(--t2);max-width:480px;margin-bottom:48px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px}
+.fc .icon{font-size:24px;margin-bottom:14px;display:block}.fc h3{font-size:16px;font-weight:600;margin-bottom:6px}.fc p{font-size:13px;color:var(--t2);line-height:1.6}
+@media(max-width:700px){.feat-grid{grid-template-columns:1fr}}
+.showcase{display:flex;flex-direction:column;gap:80px}
+.sr{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.sr.rev{direction:rtl}.sr.rev>*{direction:ltr}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:14px}
+.tg{color:var(--g);background:var(--gs)}.ta{color:var(--amber);background:rgba(233,168,32,.1)}
+.sr h3{font-size:22px;font-weight:700;margin-bottom:10px}.sr p{color:var(--t2);font-size:14px;line-height:1.7}
+.sp{display:flex;justify-content:center}
+.sp img{width:240px;border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.05)}
+@media(max-width:700px){.sr,.sr.rev{grid-template-columns:1fr;text-align:center;direction:ltr}.sp img{width:200px}}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:680px}
+.pc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;position:relative}
+.pc.pro{border-color:var(--g)}.pc .badge{position:absolute;top:-10px;right:18px;font-size:11px;font-weight:700;background:var(--g);color:var(--bg);padding:3px 12px;border-radius:10px}
+.pc h3{font-size:17px;font-weight:700;margin-bottom:2px}.pc .price{font-size:30px;font-weight:700;margin:14px 0 2px}
+.pc .price small{font-size:14px;font-weight:400;color:var(--t2)}.pc .period{font-size:12px;color:var(--t3);margin-bottom:20px}
+.pc ul{list-style:none;display:flex;flex-direction:column;gap:9px}.pc li{font-size:13px;color:var(--t2);display:flex;gap:8px}.pc li::before{content:'\2713';color:var(--g);font-weight:700;flex-shrink:0}
+.cb{display:block;text-align:center;margin-top:22px;font-size:13px;font-weight:600;padding:10px;border-radius:10px;transition:opacity .12s}.cb:hover{text-decoration:none;opacity:.88}
+.bo{border:1px solid var(--border);color:var(--t2)}.bf{background:var(--g);color:var(--bg)}
+@media(max-width:600px){.pg{grid-template-columns:1fr}}
+.pvg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pvc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px;text-align:center}
+.pvc .icon{font-size:28px;margin-bottom:12px;display:block}.pvc h3{font-size:15px;font-weight:600;margin-bottom:6px}.pvc p{font-size:13px;color:var(--t2);line-height:1.6}
+@media(max-width:600px){.pvg{grid-template-columns:1fr}}
+.fl{max-width:640px;display:flex;flex-direction:column}
+.fi{border-bottom:1px solid var(--border)}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-weight:600;font-size:15px;background:none;border:none;color:var(--t1);width:100%;text-align:left;font-family:inherit}
+.fq::after{content:'+';font-size:20px;color:var(--t3);transition:transform .25s}.fq.open::after{transform:rotate(45deg);color:var(--g)}
+.fa{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}.fa.open{max-height:200px;padding:0 0 18px 0}
+.fa p{font-size:14px;color:var(--t2);line-height:1.7}
+.cbox{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;max-width:480px;text-align:center}.cbox p{color:var(--t2);font-size:14px;margin-bottom:20px}
+footer{border-top:1px solid var(--border);padding:28px 0;text-align:center}
+footer .links{display:flex;justify-content:center;gap:24px;margin-bottom:10px;flex-wrap:wrap}
+footer .links a{font-size:13px;color:var(--t2)}footer .links a:hover{color:var(--g)}
+footer .copy{font-size:12px;color:var(--t3)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}.reveal.vis{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="/" class="logo">Rekna</a><nav class="nav-links"><a href="#funksjoner">Funksjoner</a><a href="#kjorebok">Kjørebok</a><a href="#priser">Pro</a><a href="#kontakt">Kontakt</a><a href="https://apps.apple.com/no/app/rekna/id6762281380" class="nav-cta">Last ned</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+<span class="version">v1.0 — Gratis å starte</span>
+<h1>Kvitteringer og reiseregninger, enkelt.</h1>
+<p class="desc">Skann kvitteringen. Rekna leser beløp, MVA og leverandør automatisk. Eksporter ferdig til arbeidsgiver eller regnskapsfører.</p>
+<div class="hero-btns"><a href="https://apps.apple.com/no/app/rekna/id6762281380" class="btn-primary">Last ned på App Store</a><a href="#priser" class="btn-ghost">Se Pro →</a></div>
+<p class="hero-trust">Gratis å laste ned<span>·</span>Ingen konto<span>·</span>Norsk MVA-logikk</p>
+<div class="hero-shots">
+<img src="img/Hjemskjerm.png" alt="Rekna hjemskjerm"><img src="img/Kvitteringsskjerm.png" alt="Kvitteringsliste"><img src="img/Kjorebokskjerm.png" alt="Kjørebok"><img src="img/Eksportskjerm.png" alt="Eksport">
+</div></div></section><hr>
+
+<section id="funksjoner"><div class="wrap">
+<div class="sl">Funksjoner</div><div class="st">Alt du trenger. Ingenting du ikke trenger.</div><p class="ss">Bygget for norske kvitteringer med riktig MVA, norsk datoformat og kroner.</p>
+<div class="feat-grid reveal">
+<div class="fc"><span class="icon">📸</span><h3>Skann automatisk</h3><p>Ta bilde — Rekna leser leverandør, dato, beløp og MVA-sats. Bare sjekk og lagre.</p></div>
+<div class="fc"><span class="icon">🧮</span><h3>Norsk MVA-logikk</h3><p>25%, 15% og 12% gjenkjennes automatisk. Brutto, MVA og netto beregnes live.</p></div>
+<div class="fc"><span class="icon">📂</span><h3>Prosjekter</h3><p>Samle kvitteringer per oppdrag eller kunde. Eksporter kun det du trenger.</p></div>
+<div class="fc"><span class="icon">📄</span><h3>PDF og Excel</h3><p>Eksporter ferdig reiseregning som PDF med bilder eller regneark til regnskapsfører.</p></div>
+<div class="fc"><span class="icon">🔍</span><h3>Søk og filtrer</h3><p>Finn kvitteringer etter leverandør, kategori, prosjekt eller periode. Sorter som du vil.</p></div>
+<div class="fc"><span class="icon">🔒</span><h3>Privat og lokal</h3><p>All data lagres på din telefon. Ingen konto, ingen sporing, ingen annonser.</p></div>
+</div></div></section><hr>
+
+<section id="kjorebok"><div class="wrap">
+<div class="sl">Kjørebok</div><div class="st">Km-godtgjørelse beregnet riktig.</div><p class="ss">Statens satser 2026 er innebygd. Elektrisk bil, tilhenger og km-teller støttes.</p>
+<div class="showcase">
+<div class="sr reveal"><div><span class="tag tg">Automatisk</span><h3>Registrer turer raskt</h3><p>Velg kjøretøy, skriv inn start og slutt, og Rekna beregner godtgjørelsen automatisk. Lagre kjøretøyene dine for rask registrering neste gang.</p></div><div class="sp"><img src="img/Kjorebokskjerm.png" alt="Kjørebok med turer" loading="lazy"></div></div>
+<div class="sr rev reveal"><div><span class="tag ta">Eksport</span><h3>Ferdig rapport på sekunder</h3><p>Velg periode og prosjekt, inkluder kjøreboken, og send PDF eller Excel direkte til arbeidsgiver. Brutto, MVA og netto — alt er med.</p></div><div class="sp"><img src="img/Eksportskjerm.png" alt="Eksport med kjørebok" loading="lazy"></div></div>
+</div></div></section><hr>
+
+<section id="priser"><div class="wrap">
+<div class="sl">Pro</div><div class="st">Oppgrader når du er klar.</div><p class="ss">Alt det viktigste er gratis for alltid. Pro gir deg det ekstra.</p>
+<div class="pg reveal">
+<div class="pc"><h3>Gratis</h3><div class="price">0 <small>kr</small></div><div class="period">For alltid</div>
+<ul><li>Ubegrenset skanning</li><li>Automatisk MVA-beregning</li><li>Se alle kvitteringer</li><li>1 prosjekt</li><li>Enkel PDF-eksport</li><li>Kjørebok (registrering)</li></ul>
+<a href="https://apps.apple.com/no/app/rekna/id6762281380" class="cb bo">Last ned gratis</a></div>
+<div class="pc pro"><span class="badge">Anbefalt</span><h3>Rekna Pro</h3><div class="price">49 <small>kr/mnd</small></div><div class="period">eller 250 kr/år — spar 57%</div>
+<ul><li>Alt i Gratis, pluss:</li><li>Excel-eksport (.xlsx)</li><li>PDF med kvitteringsbilder</li><li>Kjørebok i eksport</li><li>Ubegrensede prosjekter</li><li>iCloud-sikkerhetskopi</li></ul>
+<a href="https://apps.apple.com/no/app/rekna/id6762281380" class="cb bf">Oppgrader til Pro</a></div>
+</div></div></section><hr>
+
+<section><div class="wrap">
+<div class="sl">Personvern</div><div class="st">Dine data er dine. Punktum.</div><p class="ss"></p>
+<div class="pvg reveal">
+<div class="pvc"><span class="icon">📵</span><h3>Ingen konto</h3><p>Åpne appen og skann. Ingenting å registrere, ingenting å logge inn på.</p></div>
+<div class="pvc"><span class="icon">📱</span><h3>Lagres lokalt</h3><p>All data ligger på din iPhone. Ingen servere lagrer kvitteringene dine.</p></div>
+<div class="pvc"><span class="icon">🗑</span><h3>Slett når som helst</h3><p>Slett appen for å slette all data. Ingen skjulte kopier noe sted.</p></div>
+</div></div></section><hr>
+
+<section><div class="wrap">
+<div class="sl">FAQ</div><div class="st">Vanlige spørsmål.</div><p class="ss"></p>
+<div class="fl reveal">
+<div class="fi"><button class="fq">Trenger jeg en konto?</button><div class="fa"><p>Nei. Rekna fungerer uten konto. Åpne appen, skann en kvittering, og du er i gang. Dataene dine lagres lokalt på telefonen.</p></div></div>
+<div class="fi"><button class="fq">Hvordan fungerer skanningen?</button><div class="fa"><p>Ta bilde av kvitteringen med kameraet. Rekna leser teksten og foreslår leverandør, dato, beløp og MVA-sats automatisk. Du sjekker at det stemmer, og lagrer.</p></div></div>
+<div class="fi"><button class="fq">Hvilke MVA-satser støttes?</button><div class="fa"><p>Rekna støtter alle norske satser: 25% (standard), 15% (mat og drikke), 12% (transport og overnatting) og 0% (MVA-fritatt). Riktig sats foreslås automatisk basert på kvitteringen.</p></div></div>
+<div class="fi"><button class="fq">Hva er inkludert i Pro?</button><div class="fa"><p>Pro gir deg Excel-eksport, PDF med kvitteringsbilder, kjørebok i eksport, ubegrensede prosjekter og iCloud-sikkerhetskopi. Alt annet — skanning, MVA-beregning, kjørebok og enkel PDF — er gratis for alltid.</p></div></div>
+<div class="fi"><button class="fq">Hvordan beregnes km-godtgjørelse?</button><div class="fa"><p>Rekna bruker statens satser for 2026: 4,01 kr/km for bensin/diesel (0–10 000 km), 3,47 kr/km over 10 000 km, 4,31 kr/km for elektrisk bil, og +1,00 kr/km med tilhenger.</p></div></div>
+<div class="fi"><button class="fq">Hva skjer om jeg bytter telefon?</button><div class="fa"><p>Med Rekna Pro kan du sikkerhetskopiere til iCloud og gjenopprette på ny enhet. Du kan også eksportere dataene dine som PDF eller Excel før bytte.</p></div></div>
+</div></div></section><hr>
+
+<section id="kontakt"><div class="wrap" style="display:flex;flex-direction:column;align-items:center">
+<div class="sl">Kontakt</div><div class="st">Spørsmål eller tilbakemelding?</div>
+<div class="cbox reveal" style="margin-top:32px"><p>Vi leser alle henvendelser og svarer så raskt vi kan.</p><a href="mailto:support@rekna.app" class="btn-primary">Send e-post til support@rekna.app</a></div>
+</div></section>
+
+<footer><div class="wrap"><div class="links"><a href="privacy.html">Personvernerklæring</a><a href="terms.html">Vilkår for bruk</a><a href="https://apps.apple.com/no/app/rekna/id6762281380">App Store</a></div><p class="copy">&copy; 2026 Rekna &middot; Laget for norske kvitteringer</p></div></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('vis')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.fq').forEach(b=>{b.addEventListener('click',()=>{b.classList.toggle('open');b.nextElementSibling.classList.toggle('open')})});
+</script>
+</body>
+</html>
