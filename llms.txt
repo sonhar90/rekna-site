@@ -1,0 +1,54 @@
+# Rekna
+
+> Rekna er en norsk iPhone-app for å skanne kvitteringer og lage reiseregninger. Skann med kameraet, så leser appen dato, leverandør, beløp og MVA automatisk. Inkluderer kjørebok som regner ut kjøregodtgjørelse etter statens satser for 2026 (5,30 kr/km). Eksport til PDF eller Excel. All data lagres lokalt på enheten — ingen brukerkontoer, ingen sporing.
+
+Kjernefakta:
+
+- Plattform: iOS (iPhone), iOS 16+
+- Land/språk: Norge / norsk bokmål (nb-NO)
+- App Store: https://apps.apple.com/no/app/rekna/id6762281380
+- App ID: 6762281380
+- Bundle ID: com.sondre.Rekna
+- Utgiver: Sondre Vaage Haram
+- Kontakt: support@rekna-app.no
+- Pris: gratis å laste ned. Rekna Pro: 29 NOK/mnd eller 199 NOK/år (årlig sparer 43 %), kjøpes via App Store
+- Datalagring: lokalt på iPhone. Valgfri kryptert iCloud-sikkerhetskopi i Pro (Apple håndterer kryptering)
+- Tekstgjenkjenning: kvitteringsbilder sendes til sikker server for OCR. Bildene lagres ikke på serveren. Anonym enhets-ID brukes kun for å begrense antall skanninger per dag
+- Sporing: ingen analyseverktøy, ingen reklame, ingen tredjeparts-deling
+
+## Sider
+
+- [Hjem](https://rekna-app.no/): Oversikt over Rekna-appen, funksjoner, priser og FAQ
+- [Kjøregodtgjørelse 2026](https://rekna-app.no/kjoregodtgjorelse-2026.html): Komplett guide til statens satser, beregningseksempler og krav til kjørebok
+- [Personvernerklæring](https://rekna-app.no/privacy.html): Hvordan Rekna håndterer data
+- [Vilkår for bruk](https://rekna-app.no/terms.html): Vilkår, abonnement og ansvarsfraskrivelse
+
+## Funksjoner
+
+- Skanning av kvitteringer via iPhone-kameraet (automatisk gjenkjenning av dato, leverandør, beløp, MVA)
+- Automatisk MVA-beregning: 25 % (standard), 15 % (mat og drikke), 12 % (transport og overnatting), 0 % (MVA-fritatt)
+- Eksport av reiseregninger som PDF (med kvitteringsbilder vedlagt) eller Excel
+- Eksport av kjørebok som PDF eller Excel
+- Kjørebok som logger turer og regner ut kjøregodtgjørelse etter statens satser 2026 (5,30 kr/km, hvorav 3,50 kr/km skattefritt og 1,80 kr/km skattepliktig)
+- Lokal lagring uten brukerkontoer eller pålogging
+- Valgfri iCloud-sikkerhetskopi (Pro)
+
+## Priser
+
+- **Gratis** (for alltid): Ubegrenset skanning, automatisk MVA-beregning, 1 prosjekt, enkel PDF-eksport
+- **Rekna Pro** — 29 kr/mnd eller 199 kr/år (årlig sparer 43 %): Alt i Gratis pluss Excel-eksport, PDF med kvitteringsbilder, kjørebok i eksport, ubegrensede prosjekter, iCloud-backup
+
+## Vanlige spørsmål
+
+- **Hva er Rekna?** — Norsk iPhone-app for kvitteringer og reiseregninger.
+- **Hvor lagres dataene?** — Lokalt på iPhone-en. Valgfri iCloud-backup i Pro (kryptert, kun din private iCloud).
+- **Hva koster Rekna?** — Gratis å laste ned. Pro: 29 kr/mnd eller 199 kr/år.
+- **Trenger jeg konto?** — Nei. Last ned og bruk umiddelbart, ingen pålogging.
+- **Hvilke MVA-satser?** — Norske satser: 25 %, 15 %, 12 %, 0 %.
+- **Beregner Rekna kjøregodtgjørelse?** — Ja, etter statens satser 2026 (5,30 kr/km).
+- **Eksport-formater?** — PDF og Excel.
+- **Hvordan fungerer skanning?** — Kvitteringsbildet sendes til sikker server for tekstgjenkjenning. Bildet lagres ikke på serveren.
+
+## Optional
+
+- [llms-full.txt](https://rekna-app.no/llms-full.txt): Full tekst-versjon av personvernerklæring, vilkår og kjøregodtgjørelse-artikkel, samlet i én markdown-fil

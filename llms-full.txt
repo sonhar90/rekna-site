@@ -1,0 +1,214 @@
+# Rekna — Komplett innhold for LLM-konsum
+
+> Norsk iPhone-app for kvitteringer og reiseregninger. Skann med kameraet, eksporter til PDF eller Excel. Kjørebok med statens satser 2026 (5,30 kr/km). All data lokalt.
+
+Site: https://rekna-app.no/
+App Store: https://apps.apple.com/no/app/rekna/id6762281380
+Utgiver: Sondre Vaage Haram
+Sist oppdatert: 2026-04-26
+
+---
+
+## Forsiden
+
+### Verdi-propositions
+
+**Skann og lagre** — Ta bilde av kvitteringen. Beløp, dato og MVA-sats leses automatisk.
+
+**Kjørebok** — Registrer turer med automatisk km-godtgjørelse etter statens satser.
+
+**Eksporter** — Ferdig PDF eller Excel — til eget regnskap, dokumentasjon eller arbeidsgiver.
+
+### Eksport
+
+Rekna genererer profesjonelle PDF-rapporter og Excel-regneark som kan sendes direkte til arbeidsgiver eller regnskapsfører.
+
+- **Reiseregning som PDF**: Kvitteringer med brutto, MVA og netto.
+- **Kjørebok som PDF**: Alle turer med fra/til, km og godtgjørelse etter statens satser.
+- **Excel-regneark**: Kvitteringer og kjørebok som .xlsx.
+
+### Priser
+
+- **Gratis** (0 kr — for alltid): Ubegrenset skanning, automatisk MVA-beregning, 1 prosjekt, enkel PDF-eksport.
+- **Rekna Pro** (29 kr/mnd eller 199 kr/år — spar 43 % på årlig): Alt i Gratis pluss Excel-eksport, PDF med kvitteringsbilder, kjørebok i eksport, ubegrensede prosjekter, iCloud-backup.
+
+### Ofte stilte spørsmål
+
+**Hvordan fungerer skanningen?**
+Ta bilde av kvitteringen. Rekna leser teksten og foreslår leverandør, dato, beløp og MVA-sats. Du sjekker og lagrer.
+
+**Hvilke MVA-satser støttes?**
+25 % (standard), 15 % (mat og drikke), 12 % (transport og overnatting) og 0 % (MVA-fritatt).
+
+**Hva er inkludert i Pro?**
+Excel-eksport, PDF med kvitteringsbilder, kjørebok i eksport, ubegrensede prosjekter og iCloud-sikkerhetskopi. Skanning og enkel PDF er gratis for alltid.
+
+**Er dataene mine trygge?**
+All data lagres lokalt på din iPhone. Ingen konto, ingen sporing, ingen annonser.
+
+**Hva koster Rekna?**
+Selve appen er gratis å laste ned. Rekna Pro koster 29 kr/mnd eller 199 kr/år, kjøpes via App Store. Kan avsluttes når som helst i iOS-innstillingene.
+
+**Kan jeg ta sikkerhetskopi av dataene?**
+Ja, via iCloud (Pro-funksjon). Dataene lagres kryptert i din private iCloud Drive — Apple håndterer kryptering, og Rekna har ikke tilgang.
+
+**Trenger jeg konto for å bruke Rekna?**
+Nei. Last ned, gi kameratilgang, og start å skanne. Ingen e-postregistrering eller passord.
+
+**Beregner Rekna kjøregodtgjørelse automatisk?**
+Ja. Kjøreboken bruker statens sats for 2026 (5,30 kr/km). Skattefri andel (3,50 kr/km) og skattepliktig andel (1,80 kr/km) splittes automatisk i eksporten.
+
+---
+
+## Personvernerklæring
+
+Sist oppdatert: 17. april 2026
+
+### Kort oppsummert
+
+Rekna lagrer all data lokalt på din enhet. Vi samler ikke inn, lagrer eller deler personopplysningene dine. Vi har ingen brukerkonto, ingen sporing og ingen annonser.
+
+### Hvilke data behandles
+
+Rekna behandler følgende data, som kun lagres lokalt på din iPhone:
+
+- Kvitteringsbilder du tar med kameraet
+- Kvitteringsdata (leverandør, beløp, dato, MVA-sats, kategori)
+- Kjørebokoppføringer (adresser, km, formål)
+- Kjøretøyinformasjon (navn, registreringsnummer)
+- Profildata (navn, arbeidsgiver, stilling) — brukes i PDF-eksport
+- Prosjektnavn
+
+### Kvitteringslesing (OCR)
+
+Når du skanner en kvittering, sendes bildet til en sikker server for tekstgjenkjenning. Bildet behandles i sanntid og lagres ikke på serveren. Ingen personopplysninger knyttes til forespørselen. En anonym enhets-ID brukes kun for å begrense antall skanninger per dag.
+
+### iCloud-sikkerhetskopi
+
+Hvis du aktiverer iCloud-sikkerhetskopi (Pro-funksjon), lagres en kryptert kopi av dataene dine i din personlige iCloud Drive. Apple håndterer kryptering og tilgangskontroll. Rekna har ikke tilgang til din iCloud Drive.
+
+### Tredjeparter
+
+Rekna bruker følgende tredjepartstjenester:
+
+- **Apple App Store / StoreKit** — for kjøp og abonnementshåndtering. Apple behandler betalingsinformasjon direkte.
+- **OCR-proxy** — for kvitteringslesing. Ingen data lagres.
+
+Vi bruker ikke analyse-, reklame- eller sporingsverktøy.
+
+### Dine rettigheter
+
+Siden all data lagres lokalt på din enhet, har du full kontroll. Du kan slette all data når som helst via Innstillinger i appen, eller ved å slette appen.
+
+### Barn
+
+Rekna er ikke rettet mot barn under 13 år.
+
+### Kontakt
+
+support@rekna-app.no
+
+---
+
+## Vilkår for bruk
+
+Sist oppdatert: 17. april 2026
+
+### 1. Aksept av vilkår
+
+Ved å laste ned, installere eller bruke Rekna-appen godtar du disse vilkårene.
+
+### 2. Beskrivelse av tjenesten
+
+Rekna er et hjelpeverktøy for registrering av kvitteringer, utlegg og kjørebok. Appen leser kvitteringer automatisk ved hjelp av tekstgjenkjenning og beregner MVA og km-godtgjørelse basert på gjeldende norske satser.
+
+### 3. Ansvarsfraskrivelse
+
+Rekna er et hjelpeverktøy og erstatter ikke profesjonell rådgivning fra autorisert regnskapsfører, revisor eller skatterådgiver.
+
+Automatisk avlesning av kvitteringer kan inneholde feil. Brukeren er selv ansvarlig for å kontrollere at beløp, MVA-sats, dato og øvrig informasjon er korrekt før lagring og eksport.
+
+MVA-satser og km-godtgjørelsessatser oppdateres etter beste evne, men utvikleren garanterer ikke at satsene til enhver tid er korrekte.
+
+### 4. Abonnement og betaling
+
+- Rekna Pro: 29 kr/mnd eller 199 kr/år via Apple App Store.
+- Abonnementet fornyes automatisk med mindre du sier opp minst 24 timer før utløp.
+- Du kan administrere og si opp i iOS-innstillingene under Apple-ID → Abonnementer.
+- Ubrukt del av en gratis prøveperiode bortfaller ved kjøp.
+
+### 5. Brukerdata
+
+All data lagres lokalt på din enhet. Se personvernerklæringen for detaljer.
+
+### 6. Lovvalg
+
+Disse vilkårene er underlagt norsk rett.
+
+### 10. Kontakt
+
+support@rekna-app.no
+
+---
+
+## Kjøregodtgjørelse 2026 — satser, regler og beregning
+
+Oppdatert april 2026.
+
+### Statens satser for kjøregodtgjørelse i 2026
+
+Fra 1. januar 2026 er statens sats for kjøregodtgjørelse **5,30 kr per kilometer** for bruk av privat bil i jobbsammenheng. Satsen gjelder uansett kjørelengde, og for reiser både i Norge og utlandet. Den gjelder også for elbiler.
+
+| Type | Sats per km |
+|---|---|
+| Privat bil (inkl. elbil) | 5,30 kr |
+| Skattefri andel | 3,50 kr |
+| Skattepliktig andel | 1,80 kr |
+| Tung motorsykkel (over 125 ccm) | 2,95 kr |
+| Moped / lett motorsykkel | 2,00 kr |
+| Motorbåt | 7,50 kr |
+| Snøscooter / ATV | 10,00 kr |
+
+### Tillegg utover grunnsatsen
+
+| Tilleggstype | Sats |
+|---|---|
+| Passasjerer (per passasjer) | +1,00 kr/km |
+| Skogs- og anleggsveier | +1,00 kr/km |
+| Tilhenger (tungt utstyr) | +1,00 kr/km |
+
+Alle tillegg er skattefrie.
+
+### Beregningseksempel: 5 000 km i jobbkjøring
+
+- Total godtgjørelse: 5 000 × 5,30 kr = 26 500 kr
+- Skattefri del: 5 000 × 3,50 kr = 17 500 kr
+- Skattepliktig del: 5 000 × 1,80 kr = 9 000 kr
+
+Arbeidsgiver trekker forskuddsskatt og betaler arbeidsgiveravgift på den skattepliktige delen (1,80 kr/km). Du skattes ikke av de første 3,50 kr/km.
+
+### Krav til kjørebok
+
+Skatteetaten krever at du fører kjørebok med følgende opplysninger for hver tur:
+
+- Dato
+- Fra og til (startsted og bestemmelsessted)
+- Formål (kort beskrivelse av jobboppdraget)
+- Antall km
+- Registreringsnummer
+
+Du kan føre kjøreboken manuelt i papirskjema eller bruke en app. Det viktigste er at informasjonen er komplett og at du fører den fortløpende — ikke i etterkant.
+
+### FAQ
+
+**Gjelder satsen også for elbil?**
+Ja. Fra 2022 er det samme sats for alle personbiler, uavhengig av drivstofftype.
+
+**Kan arbeidsgiver betale mer enn statens sats?**
+Ja, men alt over 3,50 kr/km er skattepliktig.
+
+**Hva med bompenger og parkering?**
+Bompenger, ferge og parkeringsutgifter dekkes separat, utenom km-satsen. Du trenger kvittering.
+
+**Må jeg bruke en app for kjørebok?**
+Nei, Skatteetaten aksepterer både papir og elektronisk. Men en app gjør det lettere å føre fortløpende.
